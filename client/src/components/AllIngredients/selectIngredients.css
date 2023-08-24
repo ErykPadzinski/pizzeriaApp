@@ -1,0 +1,25 @@
+.select {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  max-width: 600px;
+  gap: 1px;
+}
+
+.select-item {
+  padding: 4px 10px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #eeeeee;
+  width: max-content;
+}
+
+.select-item-active {
+  padding: 4px 10px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 3px;
+  width: max-content;
+  background: #009578;
+  color: #ffffff;
+}

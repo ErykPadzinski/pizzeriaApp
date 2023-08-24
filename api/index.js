@@ -6,11 +6,12 @@ import authRoute from "./routes/auth.js";
 import ingredientRoute from "./routes/ingredients.js";
 import cookieParser from "cookie-parser";
 import adminRoute from "./routes/admins.js";
+import orderRoute from "./routes/orders.js";
 
 const app = express();
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:5173"); // lub '*'
+  res.setHeader("Access-Control-Allow-Origin", "*"); // lub '*'
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   next();
@@ -39,6 +40,7 @@ app.use("/admin", adminRoute);
 app.use("/auth", authRoute);
 app.use("/pizza", pizzaRoute);
 app.use("/ingredient", ingredientRoute);
+app.use("/order", orderRoute);
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;

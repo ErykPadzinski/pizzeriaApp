@@ -1,0 +1,54 @@
+.singlePizza-Details {
+  display: flex;
+  margin-top: 22rem;
+  align-items: center;
+}
+
+.singlePizza-desc {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2rem;
+}
+
+.singlePizza-img {
+  width: 800px;
+  border-radius: 10px;
+}
+
+.singlePizza-name {
+  color: black;
+}
+
+.singlePizza-ingredients {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.singlePizza-ingredients > p {
+  font-size: 18px;
+}
+
+.singlePizza-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 130px;
+  margin-top: 50px;
+}
+
+.singlePizza-button {
+  width: 220px;
+  height: 60px;
+  color: white;
+  background-color: rgb(43, 160, 43);
+  font-size: 20px;
+}
+
+.singlePizza-price {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(57, 150, 57);
+}

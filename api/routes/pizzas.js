@@ -22,5 +22,6 @@ router.delete("/:id", deletePizza);
 router.get("/:id", getPizza);
 //GET ALL
 router.get("/", getAllPizzas);
+router.get("/ingredients/:id", getPizzaIngredients);
 
 export default router;

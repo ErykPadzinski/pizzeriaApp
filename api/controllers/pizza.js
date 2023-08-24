@@ -52,3 +52,17 @@ export const getAllPizzas = async (req, res, next) => {
     next(err);
   }
 };
+
+export const getPizzaIngredients = async (req, res, next) => {
+  try {
+    const pizza = await Pizza.findById(req.params.id);
+    const list = await Promise.all(
+      pizza.ingredients.map((ing) => {
+        return Ingredient.findById(ing);
+      })
+    );
+    res.status(200).json(list);
+  } catch (err) {
+    next(err);
+  }
+};

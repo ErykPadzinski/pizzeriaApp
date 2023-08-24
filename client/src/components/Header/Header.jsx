@@ -1,10 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import "./header.css";
+import { Img } from "react-image";
+import { useNavigate } from "react-router-dom";
 
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({ type }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="header">
+    <div className={type === "menu" ? "header menuMode" : "header"}>
       <div className="header-items">
         <div className="header-left">
           <ul>
@@ -14,7 +19,12 @@ const Header = () => {
           </ul>
         </div>
         <div className="logo-container">
-          <img className="logo" src="img/pizzeria-logo.png" alt="" />
+          <Img
+            className="logo"
+            src="http://127.0.0.1:5173/public/img/pizzeria-logo.png"
+            alt=""
+            onClick={() => navigate("/")}
+          />
         </div>
         <div className="header-right">
           <div className="phone">

@@ -23,7 +23,7 @@ const useFetch = (url) => {
   const reFetch = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(url);
+      const res = await axios.get(`http://localhost:8800/${url}`);
       setData(res.data);
     } catch (err) {
       setError(err);
