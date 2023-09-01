@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import useFetch from "../../../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import "./SelectIngredients.css";
 import { useState } from "react";
 

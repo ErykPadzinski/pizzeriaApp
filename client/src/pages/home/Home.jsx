@@ -1,6 +1,6 @@
 import "./home.css";
-import Header from "../../src/components/Header/Header";
-import PizzaRender from "../../src/components/PizzaRender/PizzaRender";
+import Header from "../../components/Header/Header";
+import PizzaRender from "../../components/PizzaRender/PizzaRender";
 
 function Home() {
   return (

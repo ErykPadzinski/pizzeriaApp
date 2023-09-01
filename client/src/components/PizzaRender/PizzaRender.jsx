@@ -1,24 +1,13 @@
 import "./PizzaRender.css";
 import { Link } from "react-router-dom";
-import useFetch from "../../../hooks/useFetch.js";
+import useFetch from "../../hooks/useFetch.js";
 
 const PizzaRender = () => {
   const { data: pizzaData, loading: pizzaLoading } = useFetch(`pizza`);
-  const { data: ingredientData, loading: ingredientLoading } =
-    useFetch(`ingredient`);
 
-  if (pizzaLoading || ingredientLoading) {
+  if (pizzaLoading) {
     return "Loading";
   }
-
-  const getIngredientsNames = (ingredientIds) => {
-    return ingredientIds.map((ingredientId) => {
-      const ingredient = ingredientData.find(
-        (ingredient) => ingredient._id === ingredientId
-      );
-      return ingredient ? ingredient.name : "";
-    });
-  };
 
   return (
     <div className="pizza-container">
@@ -29,9 +18,6 @@ const PizzaRender = () => {
               <img className="pizza-img" src={item.photos}></img>
               <div className="pizza-desc">
                 <p className="pizza-name">{item.name}</p>
-                <p className="pizza-ing">
-                  {getIngredientsNames(item.ingredients).join(", ")}
-                </p>
               </div>
             </div>
           </Link>

@@ -1,8 +1,8 @@
 import { useLocation } from "react-router-dom";
 import "./singlePizza.css";
 import useFetch from "../../hooks/useFetch";
-import Header from "../../src/components/Header/Header";
-import SelectIngredients from "../../src/components/AllIngredients/SelectIngredients";
+import Header from "../../components/Header/Header";
+import SelectIngredients from "../../components/AllIngredients/SelectIngredients";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 

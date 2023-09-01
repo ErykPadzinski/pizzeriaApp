@@ -13,9 +13,15 @@ const Header = ({ type }) => {
       <div className="header-items">
         <div className="header-left">
           <ul>
-            <li>Menu</li>
-            <li>Dowóz</li>
-            <li>Kontakt</li>
+            <li onClick={() => navigate("/")} className="header-link">
+              Menu
+            </li>
+            <li onClick={() => navigate("/delivery")} className="header-link">
+              Dowóz
+            </li>
+            <li onClick={() => navigate("/contact")} className="header-link">
+              Kontakt
+            </li>
           </ul>
         </div>
         <div className="logo-container">
