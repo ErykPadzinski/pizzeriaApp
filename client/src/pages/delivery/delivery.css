@@ -1,0 +1,21 @@
+.delivery-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+}
+
+.delivery-desc {
+  max-width: 1024px;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  gap: 9rem;
+  align-items: baseline;
+  position: relative;
+}
+
+.test {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
