@@ -18,8 +18,7 @@ export default function Delivery() {
           />
           <DeliveryDesc
             icon={faClock}
-            text="Jeśli nie uda nam się dostarczyć twojego zamówienia w ciągu 60 minut,
-          otrzymasz od nas 50% zniki na swoje zamówienie"
+            text="Jeśli nie uda nam się dostarczyć twojego zamówienia w ciągu 60 minut, otrzymasz od nas 50% zniki na swoje zamówienie"
           />
           <DeliveryDesc
             icon={faCreditCard}
